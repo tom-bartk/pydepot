@@ -1,0 +1,120 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pydepot"
+dynamic = ["version"]
+description = 'Strongly-typed, scalable state management for Python.'
+readme = "README.md"
+requires-python = ">=3.10"
+license = "AGPL-3.0-or-later"
+keywords = []
+authors = [{ name = "tombartk", email = "tom.bartk@proton.me" }]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Software Development",
+  "Typing :: Typed",
+]
+dependencies = []
+
+[project.urls]
+Documentation = "https://pydepot.tombartk.com"
+Issues = "https://github.com/tom-bartk/pydepot/issues"
+Source = "https://github.com/tom-bartk/pydepot"
+
+[tool.hatch.version]
+path = "src/pydepot/__about__.py"
+
+[tool.black]
+target-version = ["py311"]
+line-length = 90
+exclue = ["noxfile.py"]
+
+[tool.mypy]
+exclude = ["^noxfile\\.py$"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 90
+ignore = [
+  "ANN101",
+  "ANN102",
+  "ANN401",
+  "ANN204",
+  "ARG001",
+  "ARG002",
+  "D100",
+  "D101",
+  "D102",
+  "D103",
+  "D104",
+  "D105",
+  "D106",
+  "D107",
+  "RUF001",
+  "PLR0913",
+]
+unfixable = []
+select = [
+  "D",
+  "E",
+  "F",
+  "I",
+  "N",
+  "W",
+  "C4",
+  "PT",
+  "UP",
+  "ANN",
+  "ARG",
+  "C90",
+  "PLE",
+  "PLR",
+  "PLW",
+  "RUF",
+  "SIM",
+  "SLF",
+  "TRY",
+]
+exclude = ["noxfile.py"]
+
+[tool.ruff.per-file-ignores]
+"__init__.py" = ["E402"]
+"tests/**/*" = [
+  "ANN001",
+  "ANN002",
+  "ANN003",
+  "ANN201",
+  "ANN202",
+  "PLR2004",
+  "S101",
+  "TID252",
+]
+
+[tool.ruff.isort]
+known-first-party = ["pydepot"]
+
+[tool.ruff.mccabe]
+max-complexity = 10
+
+[tool.ruff.pydocstyle]
+convention = "google"
+
+[tool.coverage.run]
+source_pkgs = ["src.pydepot"]
+parallel = true
+omit = ["src/pydepot/__about__.py"]
+
+[tool.coverage.paths]
+source = ["src"]
+tests = ["tests"]
+
+[tool.coverage.report]
+exclude_lines = ["no cov", "if __name__ == .__main__.:", "if TYPE_CHECKING:"]

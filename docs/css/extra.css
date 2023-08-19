@@ -1,0 +1,118 @@
+.md-header {
+  background-color: #458588;
+}
+.md-typeset .admonition.tip,
+.md-typeset details.tip {
+  border-color: #8ec07c;
+}
+.md-typeset .tip > summary::before,
+.md-typeset .tip > summary::after {
+  background-color: #8ec07c;
+}
+.md-typeset .tip > .admonition-title,
+.md-typeset .tip > summary {
+  background-color: #689d6a1f;
+}
+
+.md-typeset .admonition.example,
+.md-typeset details.example {
+  border-color: #d3869b;
+}
+.md-typeset .example > summary::before,
+.md-typeset .example > summary::after {
+  background-color: #d3869b;
+}
+.md-typeset .example > .admonition-title,
+.md-typeset .example > summary {
+  background-color: #b1628630;
+}
+
+[data-md-color-scheme="gruvbox"] {
+  --md-primary-fg-color: #83a598;
+  --md-primary-fg-color--light: #83a598;
+  --md-primary-fg-color--dark: #83a598;
+  --md-primary-bg-color: #fbf1c7;
+  --md-primary-bg-color--light: #fbf1c7;
+
+  --md-accent-fg-color: #689d6a;
+  --md-accent-bg-color: #8ec07c;
+  --md-accent-bg-color--light: #8ec07c;
+
+  --md-default-fg-color: #fbf1c7;
+  --md-default-fg-color--light: #ebdbb2;
+  --md-default-fg-color--lighter: #d5c4a1;
+  --md-default-fg-color--lightest: #bdae93;
+  --md-default-bg-color: #282828;
+  --md-default-bg-color--light: #3c3836;
+  --md-default-bg-color--lighter: #504945;
+  --md-default-bg-color--lightest: #665c54;
+
+  --md-code-fg-color: var(--md-default-fg-color--light);
+  --md-code-bg-color: #32302f;
+
+  --md-code-hl-color: #fabd2f1f;
+  --md-code-hl-number-color: #b16286;
+  --md-code-hl-special-color: #ffffff;
+  --md-code-hl-function-color: #fabd2f;
+  --md-code-hl-constant-color: #458588;
+  --md-code-hl-keyword-color: #fb4934;
+  --md-code-hl-string-color: #98971a;
+  --md-code-hl-name-color: var(--md-code-fg-color);
+  --md-code-hl-operator-color: var(--md-default-fg-color--light);
+  --md-code-hl-punctuation-color: var(--md-default-fg-color--light);
+  --md-code-hl-comment-color: var(--md-default-fg-color--lightest);
+  --md-code-hl-generic-color: var(--md-default-fg-color--light);
+  --md-code-hl-variable-color: var(--md-default-fg-color--light);
+
+  --md-typeset-color: var(--md-default-fg-color--light);
+
+  --md-typeset-a-color: var(--md-primary-fg-color);
+
+  --md-admonition-fg-color: var(--md-default-fg-color);
+  --md-admonition-bg-color: var(--md-default-bg-color);
+
+  --md-warning-fg-color: hsla(0, 0%, 0%, 0.87);
+  --md-warning-bg-color: #d79921;
+
+  --md-footer-fg-color: var(--md-default-fg-color--light);
+  --md-footer-fg-color--light: var(--md-default-fg-color--lighter);
+  --md-footer-fg-color--lighter: var(--md-default-fg-color--lightest);
+  --md-footer-bg-color: #1d2021;
+  --md-footer-bg-color--dark: #1d2021;
+}
+.doc-attribute h3::before,
+.doc-function h3::before,
+.doc-class h2::before {
+  font-weight: bold;
+  font-size: 0.8rem;
+  border-radius: 0.1rem;
+  padding: 0px 0.3rem;
+  font-family: var(--md-code-font-family);
+}
+
+.doc-class h2::before {
+  content: "class";
+  background-color: #689d6a1f;
+  color: #8ec07c;
+}
+
+.doc-function h3::before {
+  content: "func";
+  background-color: #b162861f;
+  color: #d3869b;
+}
+
+.doc-attribute h3::before {
+  content: "attr";
+  color: #fe8019;
+  background-color: #d65d0e1f;
+}
+
+.md-typeset table:not([class]) {
+  background-color: var(--md-default-bg-color);
+  border: .05rem solid var(--md-default-bg-color--light);
+}
+
+.md-typeset table:not([class]) td {
+  border-top: .05rem solid var(--md-default-bg-color--light);
+}

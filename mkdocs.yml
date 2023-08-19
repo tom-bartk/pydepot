@@ -1,0 +1,51 @@
+site_name: Pydepot
+repo_url: https://github.com/tom-bartk/pydepot
+
+theme:
+  name: material
+  icon:
+    logo: material/apps-box
+
+  palette:
+    scheme: gruvbox
+  font: false
+
+nav:
+  - Overview: "index.md"
+  - Installation: "installation.md"
+  - Quickstart: "quickstart.md"
+  - API Documentation:
+      - Store: "api/store.md"
+      - Reducer: "api/reducer.md"
+      - Action: "api/action.md"
+      - Subscriber: "api/subscriber.md"
+
+extra_css:
+  - "css/extra.css"
+
+plugins:
+  - autorefs
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [src]
+          options:
+            members_order: source
+            separate_signature: true
+            show_symbol_type_heading: true
+            docstring_options:
+              ignore_init_summary: true
+            merge_init_into_class: true
+            line_length: 90
+            show_signature_annotations: true
+
+markdown_extensions:
+  - tables
+  - toc:
+      permalink: true
+      title: Page contents
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
