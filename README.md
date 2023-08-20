@@ -4,9 +4,24 @@
   </a>
 
 <div align="center">
-<img alt="PyPI - License" src="https://img.shields.io/pypi/l/pydepot">
-<img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/pydepot">
-<img alt="PyPI - Version" src="https://img.shields.io/pypi/v/pydepot">
+<a href="https://jenkins.tombartk.com/job/pydepot/">
+  <img alt="Jenkins" src="https://img.shields.io/jenkins/build?jobUrl=https%3A%2F%2Fjenkins.tombartk.com%2Fjob%2Fpydepot">
+</a>
+<a href="https://jenkins.tombartk.com/job/pydepot/lastCompletedBuild/testReport/">
+  <img alt="Jenkins tests" src="https://img.shields.io/jenkins/tests?jobUrl=https%3A%2F%2Fjenkins.tombartk.com%2Fjob%2Fpydepot">
+</a>
+<a href="https://jenkins.tombartk.com/job/pydepot/lastCompletedBuild/coverage/">
+  <img alt="Jenkins Coverage" src="https://img.shields.io/jenkins/coverage/apiv4?jobUrl=https%3A%2F%2Fjenkins.tombartk.com%2Fjob%2Fpydepot%2F">
+</a>
+<a href="https://www.gnu.org/licenses/agpl-3.0.en.html">
+  <img alt="PyPI - License" src="https://img.shields.io/pypi/l/pydepot">
+</a>
+<a href="https://pypi.org/project/pydepot/">
+  <img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/pydepot">
+</a>
+<a href="https://pypi.org/project/pydepot/">
+  <img alt="PyPI - Version" src="https://img.shields.io/pypi/v/pydepot">
+</a>
 <a href="https://github.com/astral-sh/ruff"><img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json" alt="Ruff" style="max-width:100%;"></a>
 </div>
 
